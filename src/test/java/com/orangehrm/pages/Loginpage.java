@@ -31,6 +31,7 @@ public class Loginpage
 	{
 		System.out.println("In enterUsername method");
 		objUsername.sendKeys(username);
+		System.out.println("Username is entered successfully");
 		
 	}
 	
@@ -38,12 +39,14 @@ public class Loginpage
 	{
 		System.out.println("In enterPassword method");
 		objPassword.sendKeys(password);
+		System.out.println("Password is entered successfully");
 	}
 	
 	public void clickonLogin()
 	{
 		System.out.println("In clickonLogin method");
 		objLogin.click();
+		System.out.println("Clicked on login button");
 	}
 	
 	
