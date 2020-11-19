@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <test thread-count="5" verbose="0" name="Verify that valid user able to login into orangeHRM application by using valid credentials(failed)">
+    <parameter name="usernm" value="Admin"/>
+    <parameter name="passwd" value="admin123"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/index.php/auth/login"/>
+    <parameter name="timeoutsec" value="15"/>
+    <classes>
+      <class name="com.orangehrm.modules.Login">
+        <methods>
+          <include name="executeLoginwithValidds" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.orangehrm.modules.Login -->
+    </classes>
+  </test> <!-- Verify that valid user able to login into orangeHRM application by using valid credentials(failed) -->
+  <test thread-count="5" verbose="0" name="Verify that invalid user not able to login into orangeHRM application by using invalid credentials(failed)">
+    <parameter name="invalidpasswd" value="admin12"/>
+    <parameter name="invalidusernm" value="Admin1"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/index.php/auth/login"/>
+    <parameter name="timeoutsec" value="15"/>
+    <classes>
+      <class name="com.orangehrm.modules.Launch">
+        <methods>
+          <include name="executeLaunch" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.orangehrm.modules.Launch -->
+      <class name="com.orangehrm.modules.Login">
+        <methods>
+          <include name="executeLoginwithInvalidds" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.orangehrm.modules.Login -->
+    </classes>
+  </test> <!-- Verify that invalid user not able to login into orangeHRM application by using invalid credentials(failed) -->
+</suite> <!-- Failed suite [Suite] -->
