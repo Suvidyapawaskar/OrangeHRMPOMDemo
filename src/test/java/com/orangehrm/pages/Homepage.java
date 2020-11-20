@@ -42,6 +42,7 @@ public class Homepage
 	{
 		System.out.println("In clickonWelcome method");
 		objWelcome.click();
+		System.out.println("ClickonWelcome");
 	}
 	
 	public void waittillLogout(int timeoutsec)
@@ -49,6 +50,7 @@ public class Homepage
 		System.out.println("In waittillLogout method");
 		WebDriverWait wait= new WebDriverWait(Config.driver,timeoutsec);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Logout")));
+		System.out.println("WaittillLogout");
 	}
 	
 	public void clickonLogout() throws InterruptedException
@@ -56,6 +58,7 @@ public class Homepage
 		System.out.println("In clickonLogout method");	
 		Thread.sleep(5000);
 		objLogout.click();
+		System.out.println("clickonLogout");
 	}
 	
 	public static void main(String[] args) throws IOException, InterruptedException
