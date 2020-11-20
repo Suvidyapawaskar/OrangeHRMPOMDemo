@@ -46,18 +46,21 @@ public class LaunchApp
 	{
 		System.out.println("In enterApplicationURL method");
 		Config.driver.get(urlnm);
+		System.out.println("ApplicationURL is entered");
 	}
 	
 	public void waittillLoginpageloaded(int timeoutsec)
 	{
 		System.out.println("In waittillLoginpageloaded method");
-		Config.driver.manage().timeouts().pageLoadTimeout(timeoutsec,TimeUnit.SECONDS);		
+		Config.driver.manage().timeouts().pageLoadTimeout(timeoutsec,TimeUnit.SECONDS);
+		System.out.println("waittillLoginpageloaded");
 	}
 	
 	public void maximizeBrowser()
 	{
 		System.out.println("In maximizeBrowser method");
 		Config.driver.manage().window().maximize();
+		System.out.println("Browser is maximized");
 	}
 	
 	public static void main(String[] args) throws IOException 
